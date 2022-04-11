@@ -11,7 +11,7 @@ class Movies extends Component{
     }
 
     componentDidMount(){
-        let url= "https://api.themoviedb.org/3/movie/upcoming?api_key=<<api_key>>&language=en-US&page=1"
+        let url= "(https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks"
         fetch(url)
         .then( response => response.json())
         .then( data => this.stateState({
