@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./Card.css";
 
 class Card extends Component{
     constructor(props){
@@ -9,8 +10,8 @@ class Card extends Component{
     }
     render(){
         return(
-            <article>
-                <img src={this.props.dataDatos.poster_path}/>
+            <article className="tarjeta">
+                <img src={this.props.dataDatos.poster_path} url="" />
                 <h3>{this.props.dataDatos.original_title}</h3>
                 <p>Descripción: {this.props.dataDatos.overview}</p>
                 <button>Ver más</button>
