@@ -52,7 +52,8 @@ class Movies extends Component{
 
     render();{
         return(
-         <section>
+         
+         <section className='card-wrapper'>
              {
                  this.state.datos.length === 0 ? 
                  <p>Cargando...</p> : 
