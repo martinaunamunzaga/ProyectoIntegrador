@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer(){
     return(
-        <footer>
+        <footer className="footer">
         <ul className="team">
             <li>Nombre integrante 1</li>
             <li>Nombre integrante 2</li>
