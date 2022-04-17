@@ -11,7 +11,7 @@ class Card extends Component{
     render(){
         return(
             <article className="tarjeta">
-                <img src={this.props.dataDatos.poster_path} url="" />
+                <img alt="imagen" src={this.props.dataDatos.poster_path} url="" />
                 <h3>{this.props.dataDatos.original_title}</h3>
                 <p>Descripción: {this.props.dataDatos.overview}</p>
                 <button>Ver más</button>
