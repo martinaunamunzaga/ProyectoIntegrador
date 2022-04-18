@@ -11,7 +11,7 @@ function App() {
     </div>
 
     <div className="tira-de-peliculas">
-      <Movies/>
+      < Movies/>
     </div>
 
     <div className="footer">

@@ -2,8 +2,8 @@ import React from "react";
 
 function TopBar(){
     return(
-     <header>
-        <h1>Título/ Nombre de la app</h1>
+     <header className="header">
+        <h1 classname="titulo">Nombre de la app</h1>
         <section>
         <i class="fas fa-th"></i>
         <i class="fas fa-align-justify"></i>
