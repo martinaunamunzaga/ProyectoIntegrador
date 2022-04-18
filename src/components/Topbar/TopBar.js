@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./TopBar.css";
 
 class TopBar extends Component{
   constructor(props){
@@ -22,7 +23,7 @@ controlarCambios(event){
 render(){
   return(
     <header className="header">
-       <h1 classname="titulo">Nombre de la app</h1>
+       <h1 className="titulo">Netclick</h1>
        <section>
        <i class="fas fa-th"></i>
        <i class="fas fa-align-justify"></i>
