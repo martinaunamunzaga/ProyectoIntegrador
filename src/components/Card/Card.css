@@ -8,3 +8,11 @@
 .tarjeta img{
     width: 100%;
 }
+
+.aditional-info{
+    display: none;
+
+}
+.mostrar{
+    display: block;
+}

@@ -5,8 +5,25 @@ class Card extends Component{
     constructor(props){
         super(props)
         this.state={
-
+            VerMas:'aditional-info',
+            button:"Ver Mas",
         }
+
+    }
+    viewMore(){
+        if(this.state.VerMas ==='aditional-info' ){
+            this.setState({
+                VerMas:'Mostrar',
+                button:' Ver Menos',
+            })
+        }else {
+            this.setState({
+                VerMas:'aditional-info',
+                button:'Ver Mas',
+
+        })
+    }
+
     }
     render(){
         return(
@@ -14,7 +31,12 @@ class Card extends Component{
                 <img src={this.props.dataDatos.poster_path} url="" />
                 <h3>{this.props.dataDatos.original_title}</h3>
                 <p>Descripción: {this.props.dataDatos.overview}</p>
-                <button>Ver más</button>
+                <section className={`${this.state.VerMas}`}> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                    </section>
+                <button onClick={()=>this.viewMore()} >{this.state.button}</button>
                 <button>Eliminar</button>
             </article>
         )

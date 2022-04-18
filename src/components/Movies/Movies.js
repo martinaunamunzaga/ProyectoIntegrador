@@ -9,34 +9,6 @@ class Movies extends Component{
 
         }
     }
-}
-
-    class Card extends Component{
-        constructor(props){
-            super(props)
-            this.state ={
-                VerMas:'info-extra',
-                button:"Ver Mas",
-            }
-
-        }
-        viewMore(){
-            if(this.state.VerMas ==='info-extra' ){
-                this.setState({
-                    VerMas:'Mostrar',
-                    button:' Ver Menos',
-                })
-            }else {
-                this.setState({
-                    VerMas:'info-extra',
-                    button:'Ver Mas',
-
-            })
-        }
-
-        }
-
-    
 
     componentDidMount(){
         let url= "https://api.themoviedb.org/3/movie/upcoming?api_key=<<api_key>>&language=en-US&page=1"
