@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./";
+import "./Card.css";
 
 class Card extends Component{
     constructor(props){
@@ -28,7 +28,7 @@ class Card extends Component{
     render(){
         return(
             <article className="tarjeta">
-                <img alt="imagen" src={this.props.dataDatos.poster_path} url="" />
+                <img alt="imagen" src={`https://image.tmdb.org/t/p/w500${this.props.dataDatos.poster_path}`} url="" />
                 <h3>{this.props.dataDatos.original_title}</h3>
                 <p>Descripción: {this.props.dataDatos.overview}</p>
                 <section className={`${this.state.VerMas}`}> 
