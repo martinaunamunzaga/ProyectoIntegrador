@@ -1,12 +1,14 @@
 import React, {Component}  from "react";
 import Card from "../Card/Card";
 import TopBar from "../Topbar/TopBar";
-
+import "./Movies.css"
 class Movies extends Component{
     constructor(props){
         super(props)
         this.state ={
             datos: [],
+            datosFiltrados: [],
+            textoSearch:""
         }
     }
 
@@ -17,7 +19,9 @@ class Movies extends Component{
         .then( data =>{
              console.log(data);
               this.setState({
-            datos: data.results
+            datos: data.results,
+            datosFiltrados : data.results,
+
         })
         })
         .catch( error => error)
@@ -26,10 +30,20 @@ class Movies extends Component{
 
     search(buscado){
        let listaFiltrada= this.state.datos.filter(movies=>movies.title.toUpperCase().includes(buscado.toUpperCase()))
-       this.setState({
-           datos:listaFiltrada
-       })
-       
+        if (listaFiltrada.length> 0) {
+            this.setState({
+                datosFiltrados:listaFiltrada,
+                textoSearch:""
+            })
+            
+        }else{
+
+            this.setState({
+                datosFiltrados:[],
+                textoSearch: "No hay resultados para su parametro de busqueda"
+            })
+           
+        }
     }
 
 
@@ -40,9 +54,10 @@ class Movies extends Component{
          <section className='card-wrapper'>
              {
                  this.state.datos.length === 0 ? 
-                 <p>Cargando...</p> : 
-                this.state.datos.map((datos, idx) => <Card key={datos.original_title + idx} dataDatos={datos}/>)
+                 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>: 
+                this.state.datosFiltrados.map((datos, idx) => <Card key={datos.original_title + idx} dataDatos={datos}/>)
              }
+             {this.state.textoSearch}
          </section>
             </React.Fragment>
         )

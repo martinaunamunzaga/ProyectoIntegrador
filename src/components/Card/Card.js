@@ -32,9 +32,9 @@ class Card extends Component{
                 <h3>{this.props.dataDatos.original_title}</h3>
                 <p>Descripción: {this.props.dataDatos.overview}</p>
                 <section className={`${this.state.VerMas}`}> 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                        <p>Fecha de publicación: {this.props.dataDatos.release_date}</p>
+                        <p>{this.props.dataDatos.vote_average}</p>
+                        <p>{this.props.dataDatos.popularity}</p>
                     </section>
                 <button onClick={()=>this.viewMore()} >{this.state.button}</button>
                 <button>Eliminar</button>
