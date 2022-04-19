@@ -25,12 +25,12 @@ render(){
     <header className="header">
        <h1 className="titulo">Netclick</h1>
        <section>
-       <i class="fas fa-th"></i>
-       <i class="fas fa-align-justify"></i>
+       <button onClick={()=>this.props.orientacion()}>Orientacion</button>
        <form action="" onSubmit={ (evento) => this.evitarDefault(evento) }>
                 <input type="text" onChange={(evento)=> this.controlarCambios(evento) } value={this.state.valor} placeholder="Buscar Peliculas"/>
                 <button type="submit">Buscar</button>
        </form>
+       <button onClick={()=>this.props.agregar()}>Agregar Peliculas</button>
        </section>
    </header>
 

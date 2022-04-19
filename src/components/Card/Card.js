@@ -7,6 +7,7 @@ class Card extends Component{
         this.state={
             VerMas:'aditional-info',
             button:"Ver Mas",
+            buttonEliminar: 'Eliminar',
         }
 
     }
@@ -25,10 +26,15 @@ class Card extends Component{
     }
 
     }
+
+   
+
+
     render(){
         return(
-            <article className="tarjeta">
+            <article className={`${this.props.claseOrientacion}`}>
                 <img alt="imagen" src={`https://image.tmdb.org/t/p/w500${this.props.dataDatos.poster_path}`} url="" />
+                <div>
                 <h3>{this.props.dataDatos.original_title}</h3>
                 <p>Descripción: {this.props.dataDatos.overview}</p>
                 <section className={`${this.state.VerMas}`}> 
@@ -37,7 +43,8 @@ class Card extends Component{
                         <p> Popularidad:{this.props.dataDatos.popularity}</p>
                     </section>
                 <button onClick={()=>this.viewMore()} >{this.state.button}</button>
-                <button>Eliminar</button>
+                <button onClick={()=>this.props.eliminar(this.props.dataDatos.id)} >{this.state.buttonEliminar}</button>
+                </div>
             </article>
         )
     }
