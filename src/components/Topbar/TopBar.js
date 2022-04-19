@@ -29,7 +29,7 @@ render(){
        <i class="fas fa-align-justify"></i>
        <form action="" onSubmit={ (evento) => this.evitarDefault(evento) }>
                 <input type="text" onChange={(event)=> this.controlarCambios(event) } value={this.state.valor} placeholder="Buscar Peliculas"/>
-                <button type="submit">Buscar</button>
+                <button type="submit" value="submit" >Buscar</button>
        </form>
        </section>
    </header>
