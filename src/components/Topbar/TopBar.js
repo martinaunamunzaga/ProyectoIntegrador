@@ -27,8 +27,8 @@ render(){
        <section>
        <button onClick={()=>this.props.orientacion()}>Orientacion</button>
        <form action="" onSubmit={ (evento) => this.evitarDefault(evento) }>
-                <input type="text" onChange={(evento)=> this.controlarCambios(evento) } value={this.state.valor} placeholder="Buscar Peliculas"/>
-                <button type="submit">Buscar</button>
+                <input type="text" onChange={(event)=> this.controlarCambios(event) } value={this.state.valor} placeholder="Buscar Peliculas"/>
+                <button type="submit" value="submit" >Buscar</button>
        </form>
        <button onClick={()=>this.props.agregar()}>Agregar Peliculas</button>
        </section>
