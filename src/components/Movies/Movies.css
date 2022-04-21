@@ -67,3 +67,32 @@
       transform: translate(24px, 0);
     }
   }
+
+  @media only screen and (max-width: 768px){
+    .card-wrapper{
+    background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    color: white;
+    width: 85%;
+    margin-left: 10%;
+    }
+  }
+
+
+  @media only screen and (max-width: 420px){
+    .card-wrapper{
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    color: white;
+    width: 85%;
+    margin-left: 10%;
+    }
+}

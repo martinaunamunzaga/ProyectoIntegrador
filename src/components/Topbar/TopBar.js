@@ -24,7 +24,7 @@ render(){
   return(
     <header className="header">
        <h1 className="titulo">Netclick</h1>
-       <section>
+       <section className="menu">
        <button onClick={()=>this.props.orientacion()}>Orientacion</button>
        <form action="" onSubmit={ (evento) => this.evitarDefault(evento) }>
                 <input type="text" onChange={(event)=> this.controlarCambios(event) } value={this.state.valor} placeholder="Buscar Peliculas"/>
